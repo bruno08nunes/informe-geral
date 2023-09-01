@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --cor-principal: #295991;
+    --preto: #151515;
+    --bege: #fff4f0;
+    --cor-secundaria: #02428b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Lato', sans-serif;
+}
+
+body:not(.body-main) {
+    background-color: var(--bege);
+}
+
+.cabecalho_site {
+    background-color: var(--cor-principal);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px;
+    color: white;
+}
+
+h1 img {
+    width: 100px;
+}
+
+.cabecalho_site > * {
+    flex: 1;
+}
+
+.nav_links, .nav_links ul {
+    text-transform: uppercase;
+    font-size: 1.12em;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+}
+
+.cabecalho_site form {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav_links a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav_links a:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+    
+}
+
+.barra-de-pesquisa {
+    display: flex;
+    gap: 3px;
+    background-color: var(--cor-secundaria);
+    padding: 2px;
+    width: 120px;
+    transition: 0.3s;
+}
+
+.barra-de-pesquisa:focus-within {
+    background-color: white;
+    color: black;
+    width: 200px;
+    border: 1px solid black;
+}
+
+.lupa {
+    cursor: pointer;
+    display: flex;
+}
+
+#pesquisa {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    width: 83%;
+}
+
+::placeholder {
+    color: white;
+}
+
+.barra-de-pesquisa:focus-within ::placeholder {
+    color: black;
+}
+
+main {
+    flex: 1;
+    padding: 40px 20px;
+}
+
+.main-home {
+    display: flex;
+    flex-direction: column;
+}
+
+.div-titulo > h2 {
+    border-bottom: 1px solid black;
+    margin: 10px 35px;
+    padding: 0 5px;
+}
+
+.div_noticia{
+    justify-content: space-around;
+    display: flex;
+    padding: 5px 0;
+}
+
+.div_noticia > a {
+    flex: 1;
+    max-width: 350px;
+    text-decoration: none;
+}
+
+.div_noticia > a:hover {
+    transform: scale(1.05);
+}
+
+.div_noticia img {
+    width: 100%;
+    height: 200px;
+    grid-column: 1 / 1;
+    grid-row: 1 / 3;
+    object-fit: cover;
+}
+
+.body-main figure {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 30px;
+    width: 100%;
+    height: 200px;
+}
+
+.body-main figure figcaption {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    background-color: rgba(0, 0, 0, 0.637);
+    color: white;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+.novidades {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 350px);
+    grid-template-rows: repeat(2, 250px);
+    align-items: center;
+    justify-items: center;
+}
+
+.novidades a:first-child {
+    grid-row: 1 / 3;
+    height: 80%;
+}
+
+.novidades a:first-child figure {
+    height: 100%;
+    grid-template-rows: 1fr 50px;
+    font-size: 1.6em;
+}
+
+.novidades a:first-child img {
+    height: 100%;
+}
+
+.novidades a {
+    width: 80%;
+    max-width: 100%;
+}
+
+.main-noticias {
+    width: 900px;
+    background-color: white;
+    margin: 15px auto;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.45);
+}
+
+footer {
+    background-color: var(--cor-principal);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+.artigo_FF h2{
+    text-align: center;
+    font-size: 2em;
+}
+
+.artigo_FF :is(h3, h4) {
+    font-size: 1.7em;
+    text-align: center;
+    color: var(--cor-principal);
+    margin: 15px 0;
+}
+
+.artigo_FF h4 {
+    text-align: left;
+}
+
+.artigo_FF p {
+    font-size: 1.1em;
+    text-indent: 20px;
+    line-height: 1.4em;
+    text-align: justify;
+}
+
+.artigo_FF ul {
+    font-size: 1.1em;
+    list-style-position: inside;
+    padding: 0 30px;
+}
+
+.artigo_FF ::marker {
+    color: var(--cor-principal);
+}
+
+.artigo_FF figure {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.artigo_FF img{
+    width: 80%;
+}
+
+.artigo_FF .img-float {
+    width: 60%;
+    float: right;
+    margin: 0 20px;
+}
+
+.olho {
+    font-size: 1.7em;
+    text-align: center;
+    margin: 15px 0;
+    padding: 10px 65px;
+    border-left: 5px solid var(--cor-principal);
+}
+
+.olho cite {
+    font-size: 0.7em;
+}
