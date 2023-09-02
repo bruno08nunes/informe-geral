@@ -1,0 +1,48 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+    background-color: white !important;
+}
+
+.artigo_reportagem h2 {
+    font-size: 3em;
+}
+
+.cabecalho_site, footer {
+    display: none;
+}
+
+.main-noticias {
+    width: 95%;
+    box-shadow: none;
+}
+
+.artigo_reportagem figure {
+    width: 70%;
+    margin: auto;
+}
+
+.artigo_reportagem .img-float {
+    width: 70%;
+    float: none;
+    margin: 15px auto;
+}
+
+a, abbr {
+    text-decoration: none;
+    color: inherit !important;
+}
+
+.main-vagas {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.main-noticias::after {
+    content: "Manchete impressa do jornal Informe Geral.";
+    color: var(--cor-principal);
+    font-size: 1.4em;
+    display: block;
+    text-align: center;
+    margin: 20px;
+}

@@ -5,6 +5,7 @@
     --preto: #151515;
     --bege: #fff4f0;
     --cor-secundaria: #02428b;
+    --cinza: #EDF0F2;
 }
 
 * {
@@ -43,7 +44,7 @@ h1 img {
 
 .nav_links, .nav_links ul {
     text-transform: uppercase;
-    font-size: 1.12em;
+    font-size: clamp(1.04em, 2vw, 1.12em);
     display: flex;
     gap: 15px;
     align-items: center;
@@ -65,6 +66,10 @@ h1 img {
     text-decoration: underline;
     transform: scale(1.1);
     
+}
+
+.nav_links .menu {
+    display: none;
 }
 
 .barra-de-pesquisa {
@@ -124,11 +129,13 @@ main {
     justify-content: space-around;
     display: flex;
     padding: 5px 0;
+    gap: 30px;
 }
 
 .div_noticia > a {
     flex: 1;
     max-width: 350px;
+    height: 200px;
     text-decoration: none;
 }
 
@@ -138,7 +145,7 @@ main {
 
 .div_noticia img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     grid-column: 1 / 1;
     grid-row: 1 / 3;
     object-fit: cover;
@@ -149,7 +156,7 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 30px;
     width: 100%;
-    height: 200px;
+    height: 100%;
 }
 
 .body-main figure figcaption {
@@ -164,14 +171,15 @@ main {
 .novidades {
     display: grid;
     grid-template-columns: 1fr repeat(2, 350px);
-    grid-template-rows: repeat(2, 250px);
+    grid-template-rows: repeat(2, 200px);
     align-items: center;
     justify-items: center;
 }
 
 .novidades a:first-child {
     grid-row: 1 / 3;
-    height: 80%;
+    height: 100%;
+    max-width: 100%;
 }
 
 .novidades a:first-child figure {
@@ -184,16 +192,8 @@ main {
     height: 100%;
 }
 
-.novidades a {
-    width: 80%;
-    max-width: 100%;
-}
-
-.main-noticias {
-    width: 900px;
-    background-color: white;
-    margin: 15px auto;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.45);
+div.novidades a {
+    width: 90%;
 }
 
 footer {
@@ -208,52 +208,82 @@ footer h2 {
     margin-bottom: 10px;
 }
 
-.artigo_FF h2{
-    text-align: center;
-    font-size: 2em;
+.main-noticias {
+    max-width: 900px;
+    background-color: white;
+    margin: 15px auto;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.45);
 }
 
-.artigo_FF :is(h3, h4) {
+.artigo_reportagem h2 {
+    text-align: center;
+    font-size: 2em;
+    break-after: avoid;
+}
+
+.artigo_reportagem :is(h3, h4) {
     font-size: 1.7em;
     text-align: center;
     color: var(--cor-principal);
     margin: 15px 0;
+    break-after: avoid;
 }
 
-.artigo_FF h4 {
+.artigo_reportagem h4 {
     text-align: left;
 }
 
-.artigo_FF p {
+.artigo_reportagem p {
     font-size: 1.1em;
     text-indent: 20px;
     line-height: 1.4em;
     text-align: justify;
 }
 
-.artigo_FF ul {
+.artigo_reportagem ul {
     font-size: 1.1em;
     list-style-position: inside;
-    padding: 0 30px;
+    padding: 7px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
 }
 
-.artigo_FF ::marker {
+.artigo_reportagem ::marker {
     color: var(--cor-principal);
 }
 
-.artigo_FF figure {
+.artigo_reportagem figure {
     text-align: center;
     margin: 15px 0;
+    break-inside: avoid;
+    break-before: avoid;
 }
 
-.artigo_FF img{
+.artigo_reportagem figcaption a {
+    color: var(--cor-principal);
+}
+
+.artigo_reportagem figcaption a:hover {
+    color: #000c1a;
+}
+
+.artigo_reportagem img{
     width: 80%;
 }
 
-.artigo_FF .img-float {
-    width: 60%;
+.artigo_reportagem strong {
+    color: var(--cor-secundaria);
+}
+
+.artigo_reportagem .img-float {
+    width: 50%;
     float: right;
-    margin: 0 20px;
+    margin: 0;
+}
+
+.artigo_reportagem abbr {
+    color: var(--cor-secundaria);
 }
 
 .olho {
@@ -262,8 +292,29 @@ footer h2 {
     margin: 15px 0;
     padding: 10px 65px;
     border-left: 5px solid var(--cor-principal);
+    break-inside: avoid;
+    background-color: var(--cinza);
 }
 
 .olho cite {
     font-size: 0.7em;
+}
+
+.main-vagas {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.main-vagas article {
+    flex-basis: 47%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-vagas section {
+    flex: 1;
+    background-color: var(--cinza);
 }
