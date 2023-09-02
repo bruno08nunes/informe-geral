@@ -166,6 +166,10 @@ main {
     color: white;
     text-align: center;
     font-size: 1.4em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0 10px;
 }
 
 .novidades {
@@ -317,4 +321,5 @@ footer h2 {
 .main-vagas section {
     flex: 1;
     background-color: var(--cinza);
+    border-radius: 10px;
 }

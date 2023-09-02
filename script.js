@@ -1,5 +1,5 @@
-let menu = document.querySelector(".menu")
-let links = document.querySelector(".nav_links ul")
+const menu = document.querySelector(".menu")
+const links = document.querySelector(".nav_links ul")
 menu.addEventListener("click", abrirMenu)
 
 function abrirMenu() {
@@ -17,4 +17,9 @@ window.onresize = function () {
     else {
         links.style.display = "none"
     }
+}
+
+const legenda = document.querySelectorAll(".body-main figcaption")
+for (let pos in legenda) {
+    legenda[pos].title = legenda[pos].innerText
 }

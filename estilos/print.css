@@ -17,12 +17,7 @@ body {
     box-shadow: none;
 }
 
-.artigo_reportagem figure {
-    width: 70%;
-    margin: auto;
-}
-
-.artigo_reportagem .img-float {
+.artigo_reportagem :is(figure, .img-float) {
     width: 70%;
     float: none;
     margin: 15px auto;
@@ -36,6 +31,7 @@ a, abbr {
 .main-vagas {
     flex-direction: column;
     justify-content: flex-start;
+    width: 80%;
 }
 
 .main-noticias::after {
