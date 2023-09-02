@@ -1,7 +1,10 @@
+@charset "UTF-8";  /* Permite todos os caracteres */
+ /* CSS para páginas impressas */
+
 body {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.1em;
-    background-color: white !important;
+    background-color: white !important;  /* Esse !important faz com que sempre siga esse valor */
 }
 
 .artigo_reportagem h2 {
@@ -25,7 +28,7 @@ body {
 
 a, abbr {
     text-decoration: none;
-    color: inherit !important;
+    color: inherit !important; /* Esse !important faz com que sempre siga esse valor */
 }
 
 .main-vagas {
@@ -35,6 +38,7 @@ a, abbr {
 }
 
 .main-noticias::after {
+    /* Faz aparecer ao final da página um texto informando sobre o jornal */
     content: "Manchete impressa do jornal Informe Geral.";
     color: var(--cor-principal);
     font-size: 1.4em;

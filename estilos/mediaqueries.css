@@ -1,4 +1,8 @@
+@charset "UTF-8";  /* Permite todos os caracteres */
+/* CSS aplicado em diferentes tamanhos de tela */
+
 @media screen and (min-width: 1300px) {
+    /* Na página principal, aumenta o tamanho dos links para as notícias */
     .div_noticia:not(.novidades) > a {
         max-width: 500px;
         height: 300px;
@@ -14,13 +18,8 @@
     }
 }
 
-@media screen and (max-width: 1300px) {
-    .novidades {
-        grid-template-columns: 1fr repeat(2, 250px);
-    }
-}
-
 @media screen and (max-width: 1100px) {
+    /* Na página principal, muda o padrão da página, deixando em duas colunas */
     .novidades {
         grid-template-columns: repeat(2, minmax(220px, 400px));
         grid-template-rows: repeat(2, 150px);
@@ -35,6 +34,7 @@
 }
 
 @media screen and (max-width: 850px) {
+    /* Coloca o menu hamburguinho */
     .cabecalho_site {
         display: block;
         text-align: center;
@@ -43,6 +43,7 @@
     }
     h1 img {
         width: 150px;
+        margin-bottom: 23px;
     }
     .cabecalho_site form {
         display: none;
@@ -61,6 +62,10 @@
         background-color: var(--cor-secundaria);
         font-size: 1.8em;
     }
+    /* Deixa as seções da página principal em uma coluna */
+    .div-titulo > h2 {
+        margin: 10px 0;
+    }
     .div_noticia:not(.novidades) {
         flex-direction: column;
         align-items: center;
@@ -70,9 +75,7 @@
         width: 100%;
         flex-basis: 300px;
     }
-    .div-titulo > h2 {
-        margin: 10px 0;
-    }
+    /* Aumenta as imagens e tira a flutuação nas páginas de notícias */
     .artigo_reportagem figure img {
         width: 95%;
     }
@@ -81,15 +84,14 @@
         width: 95%;
         margin: 15px auto;
     }
+    /* Deixa as vagas uma embaixo da outra */
     .main-vagas {
         flex-direction: column;
-    }
-    h1 img {
-        margin-bottom: 23px;
     }
 }
 
 @media screen and (max-width: 500px) {
+    /* Deixa a seção de novidades em uma coluna */
     .novidades {
         display: flex;
         flex-direction: column;
@@ -107,6 +109,7 @@
         grid-template-rows: 1fr 30px;
         font-size: 1em;
     }
+    /* Diminui o tamanho das fontes */
     .olho {
         font-size: 1.3em;
         padding: 10px 6.5vw;

@@ -1,10 +1,12 @@
+@charset "UTF-8";  /* Permite todos os caracteres */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
+    /* Variáveis */
     --cor-principal: #295991;
+    --cor-secundaria: #02428b;
     --preto: #151515;
     --bege: #fff4f0;
-    --cor-secundaria: #02428b;
     --cinza: #EDF0F2;
 }
 
@@ -15,15 +17,18 @@
 }
 
 body {
-    display: flex;
+    display: flex; /* Faz com que o rodapé fique fixo no fundo da página */
     flex-direction: column;
     min-height: 100vh;
     font-family: 'Lato', sans-serif;
 }
 
 body:not(.body-main) {
+    /* Todos que não sejam o main do index ficam com o fundo bege */
     background-color: var(--bege);
 }
+
+/* Cabeçalho */
 
 .cabecalho_site {
     background-color: var(--cor-principal);
@@ -43,8 +48,8 @@ h1 img {
 }
 
 .nav_links, .nav_links ul {
-    text-transform: uppercase;
-    font-size: clamp(1.04em, 2vw, 1.12em);
+    text-transform: uppercase; /* Deixa as letras maiúsculas */
+    font-size: clamp(1.04em, 2vw, 1.12em); /* Faz com que o tamanho da fonte possa aumentar e diminuir */
     display: flex;
     gap: 15px;
     align-items: center;
@@ -64,11 +69,10 @@ h1 img {
 
 .nav_links a:hover {
     text-decoration: underline;
-    transform: scale(1.1);
-    
 }
 
 .nav_links .menu {
+    /* Tira o menu que abre e fecha */
     display: none;
 }
 
@@ -82,6 +86,7 @@ h1 img {
 }
 
 .barra-de-pesquisa:focus-within {
+    /* Muda a div caso o input dentro dela esteja selecionado */
     background-color: white;
     color: black;
     width: 200px;
@@ -101,7 +106,7 @@ h1 img {
     width: 83%;
 }
 
-::placeholder {
+.barra-de-pesquisa ::placeholder {
     color: white;
 }
 
@@ -109,8 +114,10 @@ h1 img {
     color: black;
 }
 
+/* Parte principal do index */
+
 main {
-    flex: 1;
+    flex: 1; /* Faz com que o main ocupe todo o espaço, empurrando o footer para baixo */
     padding: 40px 20px;
 }
 
@@ -128,6 +135,7 @@ main {
 .div_noticia{
     justify-content: space-around;
     display: flex;
+    flex-wrap: wrap;
     padding: 5px 0;
     gap: 30px;
 }
@@ -139,8 +147,21 @@ main {
     text-decoration: none;
 }
 
+.div_noticia:not(.novidades) a {
+    min-width: 25vw;
+}
+
 .div_noticia > a:hover {
     transform: scale(1.05);
+}
+
+.body-main figure {
+    /* Faz com que a legenda fique junto com a imagem */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 30px;
+    width: 100%;
+    height: 100%;
 }
 
 .div_noticia img {
@@ -151,14 +172,6 @@ main {
     object-fit: cover;
 }
 
-.body-main figure {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 30px;
-    width: 100%;
-    height: 100%;
-}
-
 .body-main figure figcaption {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
@@ -166,15 +179,17 @@ main {
     color: white;
     text-align: center;
     font-size: 1.4em;
+    padding: 0 10px;
+
+    /* Faz com que apareça três pontinhos quando não couber */
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    padding: 0 10px;
 }
 
 .novidades {
     display: grid;
-    grid-template-columns: 1fr repeat(2, 350px);
+    grid-template-columns: 1fr repeat(2, 250px);
     grid-template-rows: repeat(2, 200px);
     align-items: center;
     justify-items: center;
@@ -200,6 +215,8 @@ div.novidades a {
     width: 90%;
 }
 
+/* Rodapé */
+
 footer {
     background-color: var(--cor-principal);
     padding: 20px;
@@ -212,6 +229,8 @@ footer h2 {
     margin-bottom: 10px;
 }
 
+/* Parte principal das notícias, reportagens, etc */
+
 .main-noticias {
     max-width: 900px;
     background-color: white;
@@ -222,7 +241,7 @@ footer h2 {
 .artigo_reportagem h2 {
     text-align: center;
     font-size: 2em;
-    break-after: avoid;
+    break-after: avoid; /* Evita quebra ao imprimir a página */
 }
 
 .artigo_reportagem :is(h3, h4) {
@@ -230,7 +249,7 @@ footer h2 {
     text-align: center;
     color: var(--cor-principal);
     margin: 15px 0;
-    break-after: avoid;
+    break-after: avoid; /* Evita quebra ao imprimir a página */
 }
 
 .artigo_reportagem h4 {
@@ -260,8 +279,8 @@ footer h2 {
 .artigo_reportagem figure {
     text-align: center;
     margin: 15px 0;
-    break-inside: avoid;
-    break-before: avoid;
+    break-inside: avoid; /* Evita quebra ao imprimir a página */
+    break-before: avoid; /* Evita quebra ao imprimir a página */
 }
 
 .artigo_reportagem figcaption a {
@@ -282,7 +301,7 @@ footer h2 {
 
 .artigo_reportagem .img-float {
     width: 50%;
-    float: right;
+    float: right; /* Deixa a imagem flutuando sobre o texto */
     margin: 0;
 }
 
@@ -296,13 +315,15 @@ footer h2 {
     margin: 15px 0;
     padding: 10px 65px;
     border-left: 5px solid var(--cor-principal);
-    break-inside: avoid;
+    break-inside: avoid; /* Evita quebra ao imprimir a página */
     background-color: var(--cinza);
 }
 
 .olho cite {
     font-size: 0.7em;
 }
+
+ /* Parte principal vaga de emprego */
 
 .main-vagas {
     display: flex;
