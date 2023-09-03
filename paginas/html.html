@@ -34,6 +34,42 @@
     <main class="main-noticias">
         <article class="artigo_reportagem">
             <h2>O que é HTML?</h2>
+            <p><strong>HTML</strong> é uma linguagem de marcação em hipertexto. Ela é a <strong>estrutura</strong> de uma página web, definindo seu conteúdo. Por exemplo, no código podem ir parágrafos, títulos, tabelas ou listas. Ela também é responsável pelo <strong>significado</strong> da página, com ela tendo que estar de um jeito coerente.</p>
+            <p>Diferente do que muita gente pensa, HTML <strong>não</strong> é considerado como uma linguagem de programação. Isso se deve ao fato de ela não ser funcional, não podendo criar <strong>funcionalidades dinâmicas</strong>. Essa linguagem não segue as <strong>completudes de Turing</strong>, que define o que uma linguagem de programação deve conseguir fazer. Essas capacidades são:</p>
+            <ul>
+                <li>Mudar informações armazenadas em uma memória;</li>
+                <li>Fazer cálculos;</li>
+                <li>Mudar a ordem de execução;</li>
+                <li>Tomar decisões.</li>
+            </ul>
+            <p>Você pode estar pensando que essa linguagem é inútil então, porém é muito pelo <strong>contrário</strong>. Ela faz a estrutura de um site, mostrando os <strong>conteúdos</strong> na tela. Inclusive, esse site <strong>inteiro</strong> foi programado utilizando HTML (também foi usado <a href="css.html">CSS</a> e <a href="js.html">JS</a>, que você pode ver mais sobre nas respectivas páginas).</p>
+            <p>Um código HTML usa <strong>elementos</strong>, com tags de abertura, tags de fechamento, conteúdo e parâmetros. Apenas a tag de abertura é <strong>obrigatória</strong> em todos os elementos. A sintaxe é formada pelas tags dentro dos sinais <strong>&lt; &gt;</strong>. A anatomia de um código HTML segue o padrão:</p>
+            <code>
+                <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+            </code>
+            <p>Explicando um pouco o código, ele é formado por uma <strong title="&lt;!DOCTYPE html&gt;">tag sem fechamento</strong> (chamada de tag vazia) que indica que o que virá a seguir é um código HTML. Depois vem a tag <strong>&lt;html&gt;</strong> que conterá todo o conteúdo da página dentro dele. No elemento <strong>&lt;head&gt;</strong> deve ir todas as informações não visíveis para os usuários e no <strong>&lt;body&gt;</strong> deve ir os elementos que os usuários poderão ver.</p>
+            <p>Aquela é só a <strong>base</strong> do código, com muitas informações podendo ser adicionadas a eles. No código abaixo criaremos um título (com a tag <strong>&lt;h1&gt;</strong>), um parágrafo (com a tag <strong>&lt;p&gt;</strong>) e colocaremos uma imagem (com a tag <strong>&lt;img&gt;</strong>).</p>
+            <code>
+                <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;h1&gt;Título&lt;/h1&gt;
+        &lt;p&gt;Parágrafo&lt;/p&gt;
+        &lt;img src="imagem.jpg" alt="Imagem de Teste"&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+            </code>
+            <p>Essa página não tem como objetivo lhe ensinar a como estruturar um <strong>HTML</strong>, apenas a como ele funciona. Caso deseje aprender mais sobre, há diversos cursos sobre como os da <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">MDN</a>, da <a href="https://www.w3schools.com/html/default.asp" target="_blank">W3School</a> ou do <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n" target="_blank">Curso em Vídeo</a>.</p>
         </article>
     </main>
 

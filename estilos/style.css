@@ -427,3 +427,22 @@ footer h2 {
 .artigo_reportagem tr:hover td:first-child:before {
     color: white;
 }
+
+/* Parte de código */
+
+.artigo_reportagem p a:link {
+    color: var(--cor-principal);
+}
+
+.artigo_reportagem p a:hover {
+    text-decoration: none;
+}
+
+.artigo_reportagem pre {
+    background-color: var(--cinza);
+    color: var(--cor-principal);
+    font-size: 1.3em;
+    margin: 15px;
+    padding: 7px 15px;
+    overflow-x: auto;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é JavaScript? - Informe Geral</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="shortcut icon" href="../assets/logo-pequena.png" type="image/x-icon">
+    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="stylesheet" href="../estilos/mediaqueries.css" media="screen">
+    <link rel="stylesheet" href="../estilos/print.css" media="print">
+    <script src="../script.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho_site">
+        <h1><a href="../index.html"><img src="../assets/logo.png" alt="Logo do Informe Geral"></a></h1>
+        <nav class="nav_links">
+            <span class="material-symbols-outlined menu">menu</span>
+            <ul>
+                <li><a href="../index.html#novidades">Novidades</a></li>
+                <li><a href="../index.html#reportagens">Reportagens</a></li>
+                <li><a href="../index.html#variedades">Variedades</a></li>
+                <li><a href="../index.html#o-que-e">O que é?</a></li>
+            </ul>
+        </nav>
+        <form action="">
+            <div class="barra-de-pesquisa">
+                <label for="pesquisa" class="lupa"><span class="material-symbols-outlined">search</span></label>
+                <input type="text" name="pesquisa" id="pesquisa" placeholder="Buscar...">
+            </div>
+        </form>
+    </header>
+    
+    <main class="main-noticias">
+        <article class="artigo_reportagem">
+            <h2>O que é JavaScript?</h2>
+            <p><strong>JavaScript</strong> é uma linguagem de programação leve, interpretada e orientada a objeto. Ela é muito utilizada para <strong>desenvolvimento web</strong>, mas também é usada em outros ambientes sem browsers, como o <strong>node.js</strong>. A versão padrão do JS é o <strong>ECMAScript</strong>. Todos os navegadores atuais aceitam pelo menos até as versões do ECMAScript 5.1. Atualmente, é lançada uma versão da linguagem <strong>por ano</strong>.</p>
+            <p>Uma coisa muito importante, é não confundir a linguagem <strong>JavaScript</strong> com a linguagem <strong>Java</strong>. Por mais que tenham nomes semalhantes e ambas sejam linguagens de programação, as duas são <strong>muito diferentes</strong>. Java é uma linguagem usada em diversas áreas, como <strong>desenvolvimento de jogos e de softwares</strong>, enquanto JavaScript é mais usada para <strong>desenvolvimento web</strong>, mas pode ser usada em outras áreas, como em <strong>servidores</strong>.</p>
+            <p>Para ligar o JavaScript a uma <strong>página HTML</strong>, é necessário utilizar a tag <strong>&lt;script&gt;</strong>. Ela pode conter o script dentro dele ou em outro arquivo, com a extensão <strong>.js</strong>. Nos exemplos mostrados, os códigos estarão dentro do arquivo HTML.</p>
+            <p>Como JS é uma linguagem muito <strong>complexa</strong>, muitas coisas não poderão ser explicadas em apenas uma página. Agora mostraremos alguns exemplos do que ele é capaz de fazer:</p>
+            <h3>Mudar o conteúdo de um parágrafo</h3>
+            <code>
+                <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;p&gt;Parágrafo&lt;/p&gt;
+        &lt;script&gt;
+            let nome = prompt("Qual o seu nome")
+            let paragrafo = document.querySelector("p")
+            paragrafo.innerHTML = `Seja bem vindo, ${nome}`
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+            </code>
+            <p>Esse código pega o nome que um usuário inserir e muda o conteúdo do parágrafo inserindo o nome que o usuário colocou.</p>
+            <h3>Mudar a cor de um parágrafo ao clicar nele.</h3>
+            <code>
+                <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;p&gt;Parágrafo&lt;/p&gt;
+        &lt;script&gt;
+            let paragrafo = document.querySelector("p")
+            paragrafo.addEventListener("click", mudarCor)
+            function mudarCor() {
+                paragrafo.style.color = "red"
+            }
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+            </code>
+            <p>Esse código muda a cor de um parágrafo para vermelho ao clicar nele.</p>
+            <h3>Fazer a soma de dois números</h3>
+            <code>
+                <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;p&gt;Parágrafo&lt;/p&gt;
+        &lt;script&gt;
+            let num1 = prompt("Digite um número")
+            let num2 = prompt("Digite outro número")
+            let paragrafo = document.querySelector("p")
+            paragrafo.innerText = num1 + num2
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+            </code>
+            <p>Esse código, em teoria, deveria somar os dois números inseridos, porém não é isso que acontece. Caso você tenha executado o código deve ter percebido que ao invés de somar os valores, ele colocou um do lado do outro. Isso ocorre por conta de que quando você digita um valor, ele é considerado como um texto (string) ao invés de um número. Para isso, seria necessário converter o valor, mas é algo que não falaremos aqui. Caso queira saber como isso funciona, há diversos cursos que ensinam mais sobre JavaScript, como os cursos da <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">MDN</a>, os cursos da <a href="https://www.w3schools.com/js/default.asp" target="_blank">W3School</a> e o curso do <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank">Curso em Vídeo</a>.</p>
+        </article>
+    </main>
+
+    <footer>
+        <h2>Criadores</h2>
+        <address>
+            <p>Arthur Postringer</p>
+            <p>Bruno Nunes</p>
+            <p>Felipe Coimbra</p>
+            <p>Lucas Conceição</p>
+            <p>Mariana Toledo</p>
+        </address>
+    </footer>
+</body>
+</html>

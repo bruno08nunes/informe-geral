@@ -50,6 +50,10 @@ a, abbr {
     color: var(--cor-principal);
 }
 
+.artigo_reportagem pre {
+    break-inside: avoid;
+}
+
 .main-noticias::after {
     /* Faz aparecer ao final da página um texto informando sobre o jornal */
     content: "Manchete impressa do jornal Informe Geral.";
