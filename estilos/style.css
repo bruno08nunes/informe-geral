@@ -5,15 +5,16 @@
     /* Variáveis */
     --cor-principal: #295991;
     --cor-secundaria: #02428b;
-    --preto: #151515;
     --bege: #fff4f0;
     --cinza: #EDF0F2;
+    --cinza-escuro: #e5e7e7;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -104,6 +105,7 @@ h1 img {
     border: none;
     font-size: 1em;
     width: 83%;
+    caret-color: var(--cor-principal);
 }
 
 .barra-de-pesquisa ::placeholder {
@@ -127,7 +129,8 @@ main {
 }
 
 .div-titulo > h2 {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--cor-principal);
+    color: var(--cor-principal);
     margin: 10px 35px;
     padding: 0 5px;
 }
@@ -233,6 +236,7 @@ footer h2 {
 
 .main-noticias {
     max-width: 900px;
+    width: 100%;
     background-color: white;
     margin: 15px auto;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.45);
@@ -343,4 +347,83 @@ footer h2 {
     flex: 1;
     background-color: var(--cinza);
     border-radius: 10px;
+}
+
+/* Parte principal tabela brasileirão */
+
+.artigo_reportagem .div_tabela {
+    margin: 15px 0;
+}
+
+.artigo_reportagem table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.1em;
+}
+
+.tabela-classificacao {
+    counter-reset: posicao;
+}
+
+.artigo_reportagem :is(table, th, td) {
+    font-weight: normal;
+    border: 1px solid black;
+}
+
+.artigo_reportagem caption {
+    font-size: 1.7em;
+    color: var(--cor-principal);
+    text-align: left;
+    margin: 5px;
+}
+
+.artigo_reportagem thead {
+    background-color: var(--cor-principal);
+    color: white;
+    font-size: 1.1em;
+    position: sticky;
+    top: 0;
+}
+
+.artigo_reportagem tr:nth-child(2n) {
+    background-color: var(--cinza);
+}
+
+.artigo_reportagem th {
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+
+.artigo_reportagem td {
+    padding: 10px;
+}
+
+.artigo_reportagem .tabela-classificacao td:not(:first-child) {
+    text-align: center;
+}
+
+.artigo_reportagem td:nth-child(2n) {
+    background-color: var(--cinza);
+}
+
+.artigo_reportagem tr:nth-child(2n) td:nth-child(2n) {
+    background-color: var(--cinza-escuro);
+}
+
+.artigo_reportagem tr:hover > :is(td, td:nth-child(2n)) {
+    transition: .1s;
+    background-color: var(--cor-principal);
+    color: white;
+}
+
+.artigo_reportagem .tabela-classificacao td:first-child:before {
+    counter-increment: posicao;
+    content: counter(posicao) " - ";
+    display: inline-block;
+    margin-right: 4px;
+    color: var(--cor-principal);
+}
+
+.artigo_reportagem tr:hover td:first-child:before {
+    color: white;
 }

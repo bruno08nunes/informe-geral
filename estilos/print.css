@@ -7,12 +7,12 @@ body {
     background-color: white !important;  /* Esse !important faz com que sempre siga esse valor */
 }
 
-.artigo_reportagem h2 {
-    font-size: 3em;
-}
-
 .cabecalho_site, footer {
     display: none;
+}
+
+.artigo_reportagem h2 {
+    font-size: 3em;
 }
 
 .main-noticias {
@@ -35,6 +35,19 @@ a, abbr {
     flex-direction: column;
     justify-content: flex-start;
     width: 80%;
+}
+
+.artigo_reportagem thead {
+    position: static;
+}
+
+.artigo_reportagem tr:hover > :is(td, td:nth-child(2n)) {
+    background-color: initial;
+    color: black;
+}
+
+.artigo_reportagem tr:hover td:first-child:before {
+    color: var(--cor-principal);
 }
 
 .main-noticias::after {
