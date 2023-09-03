@@ -32,17 +32,18 @@
     </header>
     
     <main class="main-noticias">
-        <article class="artigo_reportagem">
-            <h2>O que é CSS?</h2>
-            <p><strong>CSS</strong> é uma linguagem de estilo, que serve para deixar as linguagens de marcação mais <strong>bonitas</strong> e <strong>apresentáveis</strong>. É recomendado que você veja a página sobre <a href="html.html">HTML</a> antes de seguir com a leitura. Normalmente é usada junto com <strong>HTML</strong>, mas pode ser usada com outras linguagens, como <strong>XML</strong>, <strong>SVG</strong> ou <strong>MathML</strong>. Assim como HTML, <strong>não</strong> é considerada uma linguagem de programação.</p>
-            <p>Ela estiliza a página, adicionando e mudando <strong>cores</strong>, <strong>fontes</strong>, <strong>posições</strong> e <strong>tamanhos</strong>. Ele pega elementos de HTML (chamados de <strong>seletores</strong>) e os altera, usando <strong>propriedades</strong> com <strong>valores</strong>. Em sua sintaxe, após os seletores abre e fecha <strong>chaves</strong>, com dentro delas indo as propriedades e os valores. Os valores são separados das propriedades por <strong>dois pontos</strong> e o par é separado por <strong>ponto e vírgula</strong>. Um exemplo de código CSS:</p>
-            <code>
+            <div class="div_main">
+            <article class="artigo_reportagem">
+                <h2>O que é CSS?</h2>
+                <p><strong>CSS</strong> é uma linguagem de estilo, que serve para deixar as linguagens de marcação mais <strong>bonitas</strong> e <strong>apresentáveis</strong>. É recomendado que você veja a página sobre <a href="html.html">HTML</a> antes de seguir com a leitura. Normalmente é usada junto com <strong>HTML</strong>, mas pode ser usada com outras linguagens, como <strong>XML</strong>, <strong>SVG</strong> ou <strong>MathML</strong>. Assim como HTML, <strong>não</strong> é considerada uma linguagem de programação.</p>
+                <p>Ela estiliza a página, adicionando e mudando <strong>cores</strong>, <strong>fontes</strong>, <strong>posições</strong> e <strong>tamanhos</strong>. Ele pega elementos de HTML (chamados de <strong>seletores</strong>) e os altera, usando <strong>propriedades</strong> com <strong>valores</strong>. Em sua sintaxe, após os seletores abre e fecha <strong>chaves</strong>, com dentro delas indo as propriedades e os valores. Os valores são separados das propriedades por <strong>dois pontos</strong> e o par é separado por <strong>ponto e vírgula</strong>. Um exemplo de código CSS:</p>
+                <code>
                 <pre>p {
     color: blue;
 }</pre>
-            </code>
-            <p>Esse código muda a cor de <strong>todos</strong> os parágrafos para azul. Os seletores, entre outras opções, podem ser selecionados usando <strong>tags de HTML</strong>, <strong>classes</strong> ou <strong>IDs</strong>. Para adicionar uma classe ou id a um elemento de HTML, você precisa adicionar algum <strong>parâmetro</strong> ao código da linguagem de marcação, como<strong> &lt;p class="paragrafo"&gt;</strong> ou <strong>&lt;p id="paragrafo1"&gt;</strong>. Para representar que é uma classe, deve usar <strong>ponto</strong> e para um ID, deve usar uma <strong>hashtag</strong>. Essas classes e IDs podem estilizar apenas ele em específico, como:</p>
-            <code>
+                </code>
+                <p>Esse código muda a cor de <strong>todos</strong> os parágrafos para azul. Os seletores, entre outras opções, podem ser selecionados usando <strong>tags de HTML</strong>, <strong>classes</strong> ou <strong>IDs</strong>. Para adicionar uma classe ou id a um elemento de HTML, você precisa adicionar algum <strong>parâmetro</strong> ao código da linguagem de marcação, como<strong> &lt;p class="paragrafo"&gt;</strong> ou <strong>&lt;p id="paragrafo1"&gt;</strong>. Para representar que é uma classe, deve usar <strong>ponto</strong> e para um ID, deve usar uma <strong>hashtag</strong>. Essas classes e IDs podem estilizar apenas ele em específico, como:</p>
+                <code>
                 <pre>.paragrafo {
     color: green;
 }
@@ -50,10 +51,10 @@
 #paragrafo1 {
     color: red;
 }</pre>
-            </code>
-            <p>Os códigos CSS podem ir em alguns lugares no HTML, podendo ser <strong>em linha</strong>, <strong>externo</strong> ou <strong>interno</strong></p>
-            <h3>Em linha</h3>
-            <code>
+                </code>
+                <p>Os códigos CSS podem ir em alguns lugares no HTML, podendo ser <strong>em linha</strong>, <strong>externo</strong> ou <strong>interno</strong></p>
+                <h3>Em linha</h3>
+                <code>
                 <pre>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -63,9 +64,9 @@
         &lt;p style="color: red;"&gt;Parágrafo&lt;/p&gt;
     &lt;/body&gt;
 &lt;/html&gt;</pre>
-            </code>
-            <h3>Interno</h3>
-            <code>
+                </code>
+                <h3>Interno</h3>
+                <code>
                 <pre>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -80,10 +81,10 @@
         &lt;p&gt;Parágrafo&lt;/p&gt;
     &lt;/body&gt;
 &lt;/html&gt;</pre>
-            </code>
-            <h3>Externo</h3>
-            <p><strong>Obs:</strong> para isso, você deve criar um outro arquivo, com a extensão <strong>.css</strong> e colocar o código CSS dentro dele. Já no HTML fica assim:</p>
-            <code>
+                </code>
+                <h3>Externo</h3>
+                <p><strong>Obs:</strong> para isso, você deve criar um outro arquivo, com a extensão <strong>.css</strong> e colocar o código CSS dentro dele. Já no HTML fica assim:</p>
+                <code>
                 <pre>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -94,9 +95,10 @@
         &lt;p&gt;Parágrafo&lt;/p&gt;
     &lt;/body&gt;
 &lt;/html&gt;</pre>
-            </code>
-            <p>Essa página não tem a intenção de lhe ensinar a usar CSS, mas lhe mostrar como ele funciona e para que ele serve. Caso tenha se interessado e queira saber mais sobre, existem diversos cursos como o da <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">MDN</a>, da <a href="https://www.w3schools.com/css/default.asp" target="_blank">W3School</a> e do <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n" target="_blank">Curso em Vídeo</a></p>
-        </article>
+                </code>
+                <p>Essa página não tem a intenção de lhe ensinar a usar CSS, mas lhe mostrar como ele funciona e para que ele serve. Caso tenha se interessado e queira saber mais sobre, existem diversos cursos como o da <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">MDN</a>, da <a href="https://www.w3schools.com/css/default.asp" target="_blank">W3School</a> e do <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n" target="_blank">Curso em Vídeo</a></p>
+            </article>
+        </div>
     </main>
 
     <footer>

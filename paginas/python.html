@@ -32,20 +32,21 @@
     </header>
     
     <main class="main-noticias">
-        <article class="artigo_reportagem">
-            <h2>O que é Python?</h2>
-            <p><strong>Python</strong> é uma linguagem de programação. Ele pode ser utilizado para <strong>desenvolvimento de software</strong>, <strong>modificar arquivos</strong> e até mesmo para o <strong>desenvolvimento web</strong>. Caso tenha visto as páginas explicando sobre JavaScript, <strong>não</strong> há uma forma de ligar o python ao HTML de forma tão simples (sem usar uma <strong>biblioteca de código</strong>)</p>
-            <p>Python é considera uma das linguagens de programação com a <strong>sintaxe mais simples</strong>. Ela utiliza como padrão a <strong>lingua inglesa</strong>. A linguagem não vem como padrão instalada no computador, sendo necessário <a href="https://python.org.br/instalacao-windows/" target="_blank">instalá-lo</a>. Atualmente está na <strong>versão 3</strong>.</p>
-            <p>Mostraremos abaixo alguns exemplos do que a linguagem é capaz de fazer:</p>
-            <h3>Calcular valores</h3>
-            <code>
+        <div class="div_main">
+            <article class="artigo_reportagem">
+                <h2>O que é Python?</h2>
+                <p><strong>Python</strong> é uma linguagem de programação. Ele pode ser utilizado para <strong>desenvolvimento de software</strong>, <strong>modificar arquivos</strong> e até mesmo para o <strong>desenvolvimento web</strong>. Caso tenha visto as páginas explicando sobre JavaScript, <strong>não</strong> há uma forma de ligar o python ao HTML de forma tão simples (sem usar uma <strong>biblioteca de código</strong>)</p>
+                <p>Python é considera uma das linguagens de programação com a <strong>sintaxe mais simples</strong>. Ela utiliza como padrão a <strong>lingua inglesa</strong>. A linguagem não vem como padrão instalada no computador, sendo necessário <a href="https://python.org.br/instalacao-windows/" target="_blank">instalá-lo</a>. Atualmente está na <strong>versão 3</strong>.</p>
+                <p>Mostraremos abaixo alguns exemplos do que a linguagem é capaz de fazer:</p>
+                <h3>Calcular valores</h3>
+                <code>
                 <pre>num1 = int(input())
 num2 = int(input())
 print(num1 + num2)</pre>
-            </code>
-            <p>Esse código guarda dois valores em diferentes variáveis e depois os soma.</p>
-            <h3>Comparar se um valor é maior que outro</h3>
-            <code>
+                </code>
+                <p>Esse código guarda dois valores em diferentes variáveis e depois os soma.</p>
+                <h3>Comparar se um valor é maior que outro</h3>
+                <code>
                 <pre>num1 = int(input())
 num2 = int(input())
 if num1 > num2:
@@ -54,19 +55,20 @@ elif num2 > num1:
     print("O segundo é maior")
 else:
     print("Os dois valores são iguais")</pre>
-            </code>
-            <p>Esse código pega dois valores, comparando se um é maior que o outro e mostrando se é ou não na tela.</p>
-            <h3>Gerar um gráfico</h3>
-            <code>
+                </code>
+                <p>Esse código pega dois valores, comparando se um é maior que o outro e mostrando se é ou não na tela.</p>
+                <h3>Gerar um gráfico</h3>
+                <code>
                 <pre>import matplotlib.pyplot as plt
 
 x = [11, 5, 5, 3] #Dados do gráfico
 myLabels = ["Maçã", "Uva", "Laranja", "Pera"] #Nome de cada parte do gráfico
 plt.pie(x, labels = myLabels) #Cria o gráfico
 plt.show()</pre>
-            </code>
-            <p>Esse código utiliza a biblioteca Matplotlib, que gera gráficos com os dados inseridos. Caso queira aprender mais sobre a linguagem, há diversos cursos, como os da <a href="https://www.w3schools.com/python/default.asp" target="_blank">W3Schools</a> ou do <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6" target="_blank">Curso em Vídeo</a>.</p>
-        </article>
+                </code>
+                <p>Esse código utiliza a biblioteca Matplotlib, que gera gráficos com os dados inseridos. Caso queira aprender mais sobre a linguagem, há diversos cursos, como os da <a href="https://www.w3schools.com/python/default.asp" target="_blank">W3Schools</a> ou do <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6" target="_blank">Curso em Vídeo</a>.</p>
+            </article>
+        </div>
     </main>
 
     <footer>
