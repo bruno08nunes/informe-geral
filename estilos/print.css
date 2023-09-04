@@ -15,7 +15,7 @@ body {
     font-size: 3em;
 }
 
-.main-noticias {
+.div_main {
     width: 95%;
     box-shadow: none;
 }
@@ -54,7 +54,7 @@ a, abbr {
     break-inside: avoid;
 }
 
-.main-noticias::after {
+.div_main::after {
     /* Faz aparecer ao final da página um texto informando sobre o jornal */
     content: "Manchete impressa do jornal Informe Geral.";
     color: var(--cor-principal);

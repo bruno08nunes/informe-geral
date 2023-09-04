@@ -107,6 +107,11 @@ h1 img {
     font-size: 1em;
     width: 83%;
     caret-color: var(--cor-principal);
+    color: white;
+}
+
+#pesquisa:focus {
+    color: black;
 }
 
 .barra-de-pesquisa ::placeholder {
