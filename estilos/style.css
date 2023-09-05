@@ -242,17 +242,18 @@ footer h2 {
 /* Parte principal das notícias, reportagens, etc */
 
 .main-noticias {
-    animation: surgimento .5s;
-    animation-fill-mode: forwards;
+    /* animation: surgimento .5s;
+    animation-fill-mode: forwards; */
     max-width: 100%;
     display: flex;
+    overflow: clip;
 }
 
-@keyframes surgimento {
+/* @keyframes surgimento {
     from {overflow-x: hidden;}
     99% {overflow-x: hidden;}
     to {overflow-x: visible;}
-}
+} */
 
 .div_main {
     padding: 40px 20px;
