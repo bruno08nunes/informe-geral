@@ -40,8 +40,8 @@ inpPesquisa.oninput = function (e) {
             text = text.toLowerCase()
             txtLegendas.push(text)
             if (txtLegendas[pos].includes(valorPesquisa)) {
-                legendas[pos].style.background = "yellow"
-                legendas[pos].style.color = "var(--cor-principal)"
+                legendas[pos].style.color = "white"
+                legendas[pos].style.background = "var(--cor-principal)"
             } else {
                 legendas[pos].style.background = "rgba(0, 0, 0, 0.637)"
                 legendas[pos].style.color = "white"
