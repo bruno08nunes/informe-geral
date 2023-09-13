@@ -348,6 +348,10 @@ footer h2 {
     font-size: 0.7em;
 }
 
+.olho p {
+    text-align: center;
+}
+
  /* Parte principal vaga de emprego */
 
 .main-vagas {
