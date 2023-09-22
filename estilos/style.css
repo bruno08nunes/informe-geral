@@ -281,14 +281,19 @@ footer h2 {
     text-align: left;
 }
 
-.artigo_reportagem p {
+.artigo_reportagem p, .artigo_reportagem > blockquote {
     font-size: 1.1em;
     text-indent: 20px;
     line-height: 1.4em;
     text-align: justify;
 }
 
-.artigo_reportagem ul {
+.artigo_reportagem > blockquote {
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.artigo_reportagem :is(ul, ol) {
     font-size: 1.1em;
     list-style-position: inside;
     padding: 7px 30px;
