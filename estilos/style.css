@@ -402,6 +402,7 @@ footer h2 {
 
 .tabela-classificacao {
     counter-reset: posicao;
+    white-space: nowrap;
 }
 
 .artigo_reportagem :is(table, th, td) {
@@ -430,15 +431,10 @@ footer h2 {
 
 .artigo_reportagem th {
     padding: 5px 10px;
-    white-space: nowrap;
 }
 
 .artigo_reportagem td {
     padding: 10px;
-}
-
-.tabela-classificacao {
-    white-space: nowrap;
 }
 
 .artigo_reportagem .tabela-classificacao td:not(:first-child) {

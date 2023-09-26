@@ -44,6 +44,11 @@ a, abbr {
 .artigo_reportagem tr:hover > :is(td, td:nth-child(2n)) {
     background-color: initial;
     color: black;
+    white-space: normal !important;
+}
+
+.tabela-classificacao {
+    white-space: normal !important;
 }
 
 .artigo_reportagem tr:hover td:first-child:before {
@@ -52,6 +57,22 @@ a, abbr {
 
 .artigo_reportagem pre {
     break-inside: avoid;
+}
+
+.section_charges {
+    flex-direction: column;
+    align-items: center;
+}
+
+.section_charges a {
+    max-width: 100%;
+    width: 100%;
+}
+
+.section_charges a figure {
+    break-inside: avoid;
+    break-before: auto;
+    break-after: auto;
 }
 
 .div_main::after {
