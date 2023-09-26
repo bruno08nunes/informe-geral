@@ -141,7 +141,7 @@ main {
     padding: 0 5px;
 }
 
-.div_noticia{
+.div_noticia, .section_charges{
     justify-content: space-around;
     display: flex;
     flex-wrap: wrap;
@@ -149,7 +149,7 @@ main {
     gap: 30px;
 }
 
-.div_noticia > a {
+:is(.div_noticia, .section_charges) > a {
     flex: 1;
     max-width: 350px;
     height: 200px;
@@ -157,15 +157,15 @@ main {
     transition: .3s;
 }
 
-.div_noticia:not(.novidades) a {
+.div_noticia:not(.novidades) a, .section_charges a {
     min-width: 25vw;
 }
 
-.div_noticia > a:hover {
+:is(.div_noticia, .section_charges) > a:hover {
     transform: scale(1.05);
 }
 
-.body-main figure {
+.body-main figure, .section_charges figure {
     /* Faz com que a legenda fique junto com a imagem */
     display: grid;
     grid-template-columns: 1fr;
@@ -174,7 +174,7 @@ main {
     height: 100%;
 }
 
-.div_noticia img {
+:is(.div_noticia, .section_charges) figure img {
     width: 100%;
     height: 100%;
     grid-column: 1 / 1;
@@ -182,7 +182,7 @@ main {
     object-fit: cover;
 }
 
-.body-main figure figcaption {
+:is(.body-main, .section_charges) figure figcaption {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     background-color: rgba(0, 0, 0, 0.637);
@@ -242,9 +242,9 @@ footer h2 {
 /* Parte principal das notícias, reportagens, etc */
 
 .main-noticias {
+    overflow: clip;
     max-width: 100%;
     display: flex;
-    overflow: clip;
 }
 
 .div_main {
@@ -281,16 +281,11 @@ footer h2 {
     text-align: left;
 }
 
-.artigo_reportagem p, .artigo_reportagem > blockquote {
+.artigo_reportagem p {
     font-size: 1.1em;
     text-indent: 20px;
     line-height: 1.4em;
     text-align: justify;
-}
-
-.artigo_reportagem > blockquote {
-    padding: 10px;
-    font-size: 1.2em;
 }
 
 .artigo_reportagem :is(ul, ol) {
@@ -354,6 +349,14 @@ footer h2 {
 }
 
 .olho p {
+    text-align: center;
+}
+
+.artigo_reportagem > blockquote {
+    font-style: italic;
+    font-size: 1.1em;
+    padding: 10px;
+    line-height: 1.4em;
     text-align: center;
 }
 
@@ -468,13 +471,13 @@ footer h2 {
     color: white;
 }
 
-.artigo_reportagem p a:link {
-    /* Muda a cor de um link ainda não visitado */
+.artigo_reportagem p a {
     color: var(--cor-principal);
+    text-underline-offset: 3px;
 }
 
 .artigo_reportagem p a:hover {
-    text-decoration: none;
+    color: inherit;
 }
 
 /* Parte de código */
@@ -489,4 +492,22 @@ footer h2 {
     overflow-x: auto;
     border: 2px solid var(--cor-principal);
     border-top-width: 12px;
+}
+
+.section_charges a {
+    min-width: 20vw;
+}
+
+/* Poemas */
+
+.artigo_poema h2 {
+    color: var(--cor-principal);
+}
+
+.artigo_poema p {
+    text-indent: 0;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    border-left: 3px solid var(--cor-principal);
+    padding-left: 15px;
 }

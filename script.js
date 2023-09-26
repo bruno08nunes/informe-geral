@@ -23,7 +23,7 @@ window.onresize = function () {
 }
 
 // Adiciona uma legenda ao passar o mouse por cima
-const legendas = document.querySelectorAll(".body-main figcaption")
+const legendas = document.querySelectorAll(".body-main figcaption, .section_charges figcaption")
 for (let pos in legendas) {
     legendas[pos].title = legendas[pos].innerText
 }
@@ -35,11 +35,8 @@ inpPesquisa.oninput = function (e) {
     if (e.target.value != "") {
         valorPesquisa = e.target.value.toLowerCase()
         for (let pos in legendas) {
-            text = legendas[pos].textContent
-            text = String(text)
-            text = text.toLowerCase()
-            txtLegendas.push(text)
-            if (txtLegendas[pos].includes(valorPesquisa)) {
+            text = legendas[pos].textContent.toLowerCase()
+            if (text.includes(valorPesquisa)) {
                 legendas[pos].style.color = "white"
                 legendas[pos].style.background = "var(--cor-principal)"
             } else {
