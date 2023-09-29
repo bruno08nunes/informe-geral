@@ -138,6 +138,7 @@ h1 img {
 .nav_links .menu {
     /* Tira o menu que abre e fecha */
     display: none;
+    user-select: none
 }
 
 :is(header, footer) ::selection {
