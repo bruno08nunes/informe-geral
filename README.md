@@ -27,4 +27,4 @@ alunos e sua família até os professores.</p>
 <img width="940" alt="image" src="https://github.com/bruno08nunes/informe-geral/assets/139359503/9b37e98e-9837-4051-ad7e-dd821f0c3cfb">
 <img width="938" alt="image" src="https://github.com/bruno08nunes/informe-geral/assets/139359503/d6bb76e2-bbc8-4284-bd6e-e34d921acfef">
 
-<p>Link do site <a href="https://bruno08nunes.github.io/informe-geral/index.html">Informe Geral</a></p>
+<p>Link do site <a href="https://bruno08nunes.github.io/informe-geral/index.html" target="_blank">Informe Geral</a></p>
