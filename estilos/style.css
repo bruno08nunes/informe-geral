@@ -1,6 +1,7 @@
 @charset "UTF-8";  /* Permite todos os caracteres */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/* Raíz */
 :root {
     /* Variáveis */
     --cor-principal: #295991;
@@ -10,12 +11,15 @@
     --cinza-escuro: #e5e7e7;
 }
 
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
+/* Corpo do site */
 
 body {
     display: flex; /* Faz com que o rodapé fique fixo no fundo da página */
@@ -25,8 +29,70 @@ body {
 }
 
 body:not(.body-main) {
-    /* Todos que não sejam o main do index ficam com o fundo bege */
+    /* Todos que não sejam o index ficam com o fundo bege */
     background-color: var(--bege);
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    /* Barra de rolagem */
+    background: var(--cinza);
+    width: 15px;
+}
+::-webkit-scrollbar-thumb {
+    /* Botão de arrastar da barra de rolagem */
+    border: 2px solid var(--cinza);
+    background-color: var(--cor-principal);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--cor-secundaria);
+}
+
+body::-webkit-scrollbar-button:single-button {
+    /* Botões de subir e descer a barra de rolagem */
+    background-color: #eee;
+    display: block;
+    background-size: 10px;
+    background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar-button:single-button:decrement {
+    /* Botões de subir a barra de rolagem */
+    height: 12px;
+    width: 16px;
+}
+
+::-webkit-scrollbar-button:single-button:increment {
+    /* Botões descer a barra de rolagem */
+    height: 12px;
+    width: 16px;
+}
+
+body::-webkit-scrollbar-button:single-button:decrement {
+    /* Botões de subir a barra de rolagem */
+    background-position: center 5px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(41, 89, 145)'><polygon points='50,00 0,50 100,50'/></svg>");
+}
+
+body::-webkit-scrollbar-button:single-button:increment {
+     /* Botões descer a barra de rolagem */
+    background-position: center 2px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(41, 89, 145)'><polygon points='0,0 100,0 50,50'/></svg>");
+}
+
+.div_tabela::-webkit-scrollbar-button:single-button:decrement {
+    /* Botões de subir a barra de rolagem */
+    background-position: center;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(41, 89, 145)'><polygon points='100,0 50,50 100,100'/></svg>");
+}
+
+.div_tabela::-webkit-scrollbar-button:single-button:increment {
+    /* Botões descer a barra de rolagem */
+    background-position: center;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(41, 89, 145)'><polygon points='50,50 0,100 0,0'/></svg>");
 }
 
 /* Cabeçalho */
@@ -225,20 +291,6 @@ div.novidades a {
     width: 90%;
 }
 
-/* Rodapé */
-
-footer {
-    background-color: var(--cor-principal);
-    padding: 20px;
-    color: white;
-    text-align: center;
-    font-size: 1.2em;
-}
-
-footer h2 {
-    margin-bottom: 10px;
-}
-
 /* Parte principal das notícias, reportagens, etc */
 
 .main-noticias {
@@ -261,6 +313,8 @@ footer h2 {
     from {transform: translate(50vw);}
     to {transform: translate(0);}
 }
+
+/* Estilização dos títulos e parágrafos */
 
 .artigo_reportagem h2 {
     text-align: center;
@@ -288,51 +342,23 @@ footer h2 {
     text-align: justify;
 }
 
-.artigo_reportagem :is(ul, ol) {
-    font-size: 1.1em;
-    list-style-position: inside;
-    padding: 7px 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-}
-
-.artigo_reportagem ::marker {
-    color: var(--cor-principal);
-}
-
-.artigo_reportagem figure {
-    text-align: center;
-    margin: 15px 0;
-    break-inside: avoid; /* Evita quebra ao imprimir a página */
-    break-before: avoid; /* Evita quebra ao imprimir a página */
-}
-
-.artigo_reportagem figcaption a {
-    color: var(--cor-principal);
-}
-
-.artigo_reportagem figcaption a:hover {
-    color: #000c1a;
-}
-
-.artigo_reportagem img{
-    width: 80%;
-}
-
 .artigo_reportagem strong {
     color: var(--cor-secundaria);
-}
-
-.artigo_reportagem .img-float {
-    width: 50%;
-    float: right; /* Deixa a imagem flutuando sobre o texto */
-    margin: 0;
 }
 
 .artigo_reportagem abbr {
     color: var(--cor-secundaria);
 }
+
+.artigo_reportagem > blockquote {
+    font-style: italic;
+    font-size: 1.1em;
+    padding: 10px;
+    line-height: 1.4em;
+    text-align: center;
+}
+
+/* Estilização do olho das reportagens */
 
 .olho {
     font-size: 1.7em;
@@ -352,43 +378,49 @@ footer h2 {
     text-align: center;
 }
 
-.artigo_reportagem > blockquote {
-    font-style: italic;
+/* Estilização das listas */
+
+.artigo_reportagem :is(ul, ol) {
     font-size: 1.1em;
-    padding: 10px;
-    line-height: 1.4em;
-    text-align: center;
-}
-
- /* Parte principal vaga de emprego */
-
-.main-vagas {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    align-items: stretch;
-}
-
-.main-vagas article {
-    flex-basis: 47%;
+    list-style-position: inside;
+    padding: 7px 30px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    transition: .3s;
+    gap: 7px;
 }
 
-.main-vagas article:hover {
-    transform: translate(0, -10px);
+.artigo_reportagem ::marker {
+    color: var(--cor-principal);
 }
 
-.main-vagas section {
-    flex: 1;
-    background-color: var(--cinza);
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.45);
+/* Estilização das imagens */
+
+.artigo_reportagem figure {
+    text-align: center;
+    margin: 15px 0;
+    break-inside: avoid; /* Evita quebra ao imprimir a página */
+    break-before: avoid; /* Evita quebra ao imprimir a página */
 }
 
-/* Parte principal tabela brasileirão */
+.artigo_reportagem img{
+    width: 80%;
+}
+
+.artigo_reportagem figcaption a {
+    color: var(--cor-principal);
+}
+
+.artigo_reportagem figcaption a:hover {
+    color: #000c1a;
+}
+
+.artigo_reportagem .img-float {
+    width: 50%;
+    float: right; /* Deixa a imagem flutuando sobre o texto */
+    margin: 0;
+}
+
+/* Estilização de Tabelas */
 
 .artigo_reportagem .div_tabela {
     margin: 15px 0;
@@ -467,6 +499,8 @@ footer h2 {
     color: white;
 }
 
+/* Estilização dos Links */
+
 .artigo_reportagem p a {
     color: var(--cor-principal);
     text-underline-offset: 3px;
@@ -506,4 +540,66 @@ footer h2 {
     margin-bottom: 20px;
     border-left: 3px solid var(--cor-principal);
     padding-left: 15px;
+}
+
+/* Estilização dos vídeos/iframes */
+
+.artigo_reportagem video {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.div_iframe {
+    position: relative;
+    padding-bottom: 56%;
+    background-color: var(--cor-principal);
+    margin: 15px 0;
+}
+
+.div_iframe iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Parte principal vaga de emprego */
+
+.main-vagas {
+   display: flex;
+   gap: 30px;
+   justify-content: center;
+   align-items: stretch;
+}
+
+.main-vagas article {
+   flex-basis: 47%;
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   transition: .3s;
+}
+
+.main-vagas article:hover {
+   transform: translate(0, -10px);
+}
+
+.main-vagas section {
+   flex: 1;
+   background-color: var(--cinza);
+   border-radius: 10px;
+   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.45);
+}
+
+/* Rodapé */
+
+footer {
+    background-color: var(--cor-principal);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+footer h2 {
+    margin-bottom: 10px;
 }
