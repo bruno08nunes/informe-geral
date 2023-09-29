@@ -87,7 +87,7 @@
         flex-basis: 300px;
     }
     /* Aumenta as imagens e tira a flutuação nas páginas de notícias */
-    .artigo_reportagem figure img {
+    .artigo_reportagem:not(.artigo_charges) figure img {
         width: 95%;
     }
     .artigo_reportagem .img-float {
@@ -99,9 +99,12 @@
     .main-vagas {
         flex-direction: column;
     }
+    .section_charges a {
+        min-width: 208px;
+    }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 501px) {
     /* Deixa a seção de novidades em uma coluna */
     .novidades {
         display: flex;
@@ -133,5 +136,13 @@
     }
     :not(.main-vagas) > .artigo_reportagem ul {
         padding: 7px 10px;
+    }
+    .section_charges a {
+        min-width: 100%;
+        width: 100%;
+    }
+    .artigo_poema p {
+        font-size: 1.1em;
+        padding-left: 5px;
     }
 }

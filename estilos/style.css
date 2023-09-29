@@ -17,6 +17,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    scrollbar-color: var(--cor-principal) var(--cinza);
 }
 
 /* Corpo do site */
@@ -59,37 +60,31 @@ body::-webkit-scrollbar-button:single-button {
     background-repeat: no-repeat;
 }
 
-::-webkit-scrollbar-button:single-button:decrement {
+::-webkit-scrollbar-button {
     /* Botões de subir a barra de rolagem */
     height: 12px;
     width: 16px;
 }
 
-::-webkit-scrollbar-button:single-button:increment {
-    /* Botões descer a barra de rolagem */
-    height: 12px;
-    width: 16px;
-}
-
-body::-webkit-scrollbar-button:single-button:decrement {
+::-webkit-scrollbar-button:single-button:vertical:decrement {
     /* Botões de subir a barra de rolagem */
     background-position: center 5px;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(41, 89, 145)'><polygon points='50,00 0,50 100,50'/></svg>");
 }
 
-body::-webkit-scrollbar-button:single-button:increment {
+::-webkit-scrollbar-button:single-button:vertical:increment {
      /* Botões descer a barra de rolagem */
     background-position: center 2px;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(41, 89, 145)'><polygon points='0,0 100,0 50,50'/></svg>");
 }
 
-.div_tabela::-webkit-scrollbar-button:single-button:decrement {
+::-webkit-scrollbar-button:single-button:horizontal:decrement {
     /* Botões de subir a barra de rolagem */
     background-position: center;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(41, 89, 145)'><polygon points='100,0 50,50 100,100'/></svg>");
 }
 
-.div_tabela::-webkit-scrollbar-button:single-button:increment {
+::-webkit-scrollbar-button:single-button:horizontal:increment {
     /* Botões descer a barra de rolagem */
     background-position: center;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(41, 89, 145)'><polygon points='50,50 0,100 0,0'/></svg>");
@@ -122,6 +117,7 @@ h1 img {
     align-items: center;
     list-style: none;
     justify-content: center;
+    text-align: center;
 }
 
 .cabecalho_site form {
@@ -144,6 +140,11 @@ h1 img {
     display: none;
 }
 
+:is(header, footer) ::selection {
+    background-color: white;
+    color: var(--cor-principal);
+}
+
 .barra-de-pesquisa {
     display: flex;
     gap: 3px;
@@ -164,6 +165,7 @@ h1 img {
 .lupa {
     cursor: pointer;
     display: flex;
+    user-select: none;
 }
 
 #pesquisa {
@@ -182,6 +184,7 @@ h1 img {
 
 .barra-de-pesquisa ::placeholder {
     color: white;
+    opacity: 1;
 }
 
 .barra-de-pesquisa:focus-within ::placeholder {
@@ -207,7 +210,7 @@ main {
     padding: 0 5px;
 }
 
-.div_noticia, .section_charges{
+.div_noticia, .section_charges {
     justify-content: space-around;
     display: flex;
     flex-wrap: wrap;
@@ -223,7 +226,7 @@ main {
     transition: .3s;
 }
 
-.div_noticia:not(.novidades) a, .section_charges a {
+.div_noticia:not(.novidades) a {
     min-width: 25vw;
 }
 
@@ -342,12 +345,29 @@ div.novidades a {
     text-align: justify;
 }
 
+.artigo_reportagem ::selection {
+    background-color: var(--cor-principal);
+    color: white;
+}
+
 .artigo_reportagem strong {
     color: var(--cor-secundaria);
 }
 
 .artigo_reportagem abbr {
     color: var(--cor-secundaria);
+}
+
+.artigo_reportagem :is(ins, u, del) {
+    text-decoration-color: var(--cor-principal);
+}
+
+.artigo_reportagem :is(sub, sup) {
+    font-size: 0.7em;
+}
+
+.artigo_reportagem :is(sub) {
+    vertical-align: baseline;
 }
 
 .artigo_reportagem > blockquote {
@@ -387,6 +407,16 @@ div.novidades a {
     display: flex;
     flex-direction: column;
     gap: 7px;
+}
+
+.artigo_reportagem dt {
+    color: var(--cor-principal);
+    font-weight: bolder;
+}
+
+.artigo_reportagem dd {
+    margin: 10px 0;
+    margin-inline-start: 40px;
 }
 
 .artigo_reportagem ::marker {
@@ -525,7 +555,7 @@ div.novidades a {
 }
 
 .section_charges a {
-    min-width: 20vw;
+    min-width: 300px;
 }
 
 /* Poemas */
