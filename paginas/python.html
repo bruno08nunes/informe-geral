@@ -1,85 +1,148 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>O que é Python? - Informe Geral</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="shortcut icon" href="../assets/logo-pequena.png" type="image/x-icon">
-    <link rel="stylesheet" href="../estilos/style.css">
-    <link rel="stylesheet" href="../estilos/mediaqueries.css" media="screen">
-    <link rel="stylesheet" href="../estilos/print.css" media="print">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/logo-pequena.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../estilos/style.css" />
+    <link rel="stylesheet" href="../estilos/mediaqueries.css" media="screen" />
+    <link rel="stylesheet" href="../estilos/print.css" media="print" />
     <script src="../script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header class="cabecalho_site">
-        <h1><a href="../index.html"><img src="../assets/logo.png" alt="Logo do Informe Geral"></a></h1>
-        <nav class="nav_links">
-            <span class="material-symbols-outlined menu">menu</span>
-            <ul>
-                <li><a href="../index.html#novidades">Novidades</a></li>
-                <li><a href="../index.html#reportagens">Reportagens</a></li>
-                <li><a href="../index.html#variedades">Variedades</a></li>
-                <li><a href="../index.html#o-que-e">O que é?</a></li>
-            </ul>
-        </nav>
-        <form action="">
-            <div class="barra-de-pesquisa">
-                <label for="pesquisa" class="lupa"><span class="material-symbols-outlined">search</span></label>
-                <input type="text" name="pesquisa" id="pesquisa" placeholder="Buscar...">
-            </div>
-        </form>
+      <h1>
+        <a href="../index.html"
+          ><img src="../assets/logo.png" alt="Logo do Informe Geral"
+        /></a>
+      </h1>
+      <nav class="nav_links">
+        <span class="material-symbols-outlined menu">menu</span>
+        <ul>
+          <li><a href="../index.html#novidades">Novidades</a></li>
+          <li><a href="../index.html#reportagens">Reportagens</a></li>
+          <li><a href="../index.html#variedades">Variedades</a></li>
+          <li><a href="../index.html#o-que-e">O que é?</a></li>
+        </ul>
+      </nav>
+      <form action="">
+        <div class="barra-de-pesquisa">
+          <label for="pesquisa" class="lupa"
+            ><span class="material-symbols-outlined">search</span></label
+          >
+          <input
+            type="text"
+            name="pesquisa"
+            id="pesquisa"
+            placeholder="Buscar..."
+          />
+        </div>
+      </form>
     </header>
-    
+
     <main class="main-noticias">
-        <div class="div_main">
-            <article class="artigo_reportagem">
-                <h2>O que é Python?</h2>
-                <p><strong>Python</strong> é uma linguagem de programação. Ele pode ser utilizado para <strong>desenvolvimento de software</strong>, <strong>modificar arquivos</strong> e até mesmo para o <strong>desenvolvimento web</strong>. Caso tenha visto as páginas explicando sobre JavaScript, <strong>não</strong> há uma forma de ligar o python ao HTML de forma tão simples (sem usar uma <strong>biblioteca de código</strong>)</p>
-                <p>Python é considera uma das linguagens de programação com a <strong>sintaxe mais simples</strong>. Ela utiliza como padrão a <strong>lingua inglesa</strong>. A linguagem não vem como padrão instalada no computador, sendo necessário <a href="https://python.org.br/instalacao-windows/" target="_blank">instalá-lo</a>. Atualmente está na <strong>versão 3</strong>.</p>
-                <p>Mostraremos abaixo alguns exemplos do que a linguagem é capaz de fazer:</p>
-                <h3>Calcular valores</h3>
-                <code>
-                <pre>num1 = int(input())
+      <div class="div_main">
+        <article class="artigo_reportagem">
+          <h2>O que é Python?</h2>
+          <p>
+            <strong>Python</strong> é uma linguagem de programação. Ele pode ser
+            utilizado para <strong>desenvolvimento de software</strong>,
+            <strong>modificar arquivos</strong> e até mesmo para o
+            <strong>desenvolvimento web</strong>. Caso tenha visto as páginas
+            explicando sobre JavaScript, <strong>não</strong> há uma forma de
+            ligar o python ao HTML de forma tão simples (sem usar uma
+            <strong>biblioteca de código</strong>)
+          </p>
+          <p>
+            Python é considera uma das linguagens de programação com a
+            <strong>sintaxe mais simples</strong>. Ela utiliza como padrão a
+            <strong>lingua inglesa</strong>. A linguagem não vem como padrão
+            instalada no computador, sendo necessário
+            <a href="https://python.org.br/instalacao-windows/" target="_blank"
+              >instalá-lo</a
+            >. Atualmente está na <strong>versão 3</strong>.
+          </p>
+          <p>
+            Mostraremos abaixo alguns exemplos do que a linguagem é capaz de
+            fazer:
+          </p>
+          <h3>Calcular valores</h3>
+          <code>
+            <pre>
+num1 = int(input())
 num2 = int(input())
-print(num1 + num2)</pre>
-                </code>
-                <p>Esse código guarda dois valores em diferentes variáveis e depois os soma.</p>
-                <h3>Comparar se um valor é maior que outro</h3>
-                <code>
-                <pre>num1 = int(input())
+print(num1 + num2)</pre
+            >
+          </code>
+          <p>
+            Esse código guarda dois valores em diferentes variáveis e depois os
+            soma.
+          </p>
+          <h3>Comparar se um valor é maior que outro</h3>
+          <code>
+            <pre>
+num1 = int(input())
 num2 = int(input())
 if num1 > num2:
     print("O primeiro é maior")
 elif num2 > num1:
     print("O segundo é maior")
 else:
-    print("Os dois valores são iguais")</pre>
-                </code>
-                <p>Esse código pega dois valores, comparando se um é maior que o outro e mostrando se é ou não na tela.</p>
-                <h3>Gerar um gráfico</h3>
-                <code>
-                <pre>import matplotlib.pyplot as plt
+    print("Os dois valores são iguais")</pre
+            >
+          </code>
+          <p>
+            Esse código pega dois valores, comparando se um é maior que o outro
+            e mostrando se é ou não na tela.
+          </p>
+          <h3>Gerar um gráfico</h3>
+          <code>
+            <pre>
+import matplotlib.pyplot as plt
 
 x = [11, 5, 5, 3] #Dados do gráfico
 myLabels = ["Maçã", "Uva", "Laranja", "Pera"] #Nome de cada parte do gráfico
 plt.pie(x, labels = myLabels) #Cria o gráfico
-plt.show()</pre>
-                </code>
-                <p>Esse código utiliza a biblioteca Matplotlib, que gera gráficos com os dados inseridos. Caso queira aprender mais sobre a linguagem, há diversos cursos, como os da <a href="https://www.w3schools.com/python/default.asp" target="_blank">W3Schools</a> ou do <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6" target="_blank">Curso em Vídeo</a>.</p>
-            </article>
-        </div>
+plt.show()</pre
+            >
+          </code>
+          <p>
+            Esse código utiliza a biblioteca Matplotlib, que gera gráficos com
+            os dados inseridos. Caso queira aprender mais sobre a linguagem, há
+            diversos cursos, como os da
+            <a
+              href="https://www.w3schools.com/python/default.asp"
+              target="_blank"
+              >W3Schools</a
+            >
+            ou do
+            <a
+              href="https://www.youtube.com/playlist?list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6"
+              target="_blank"
+              >Curso em Vídeo</a
+            >.
+          </p>
+        </article>
+      </div>
     </main>
 
     <footer>
-        <h2>Criadores</h2>
-        <address>
-            <p>Arthur Postringer</p>
-            <p>Bruno Nunes</p>
-            <p>Felipe Coimbra</p>
-            <p>Lucas Conceição</p>
-            <p>Mariana Toledo</p>
-        </address>
+      <h2>Criadores</h2>
+      <address>
+        <p>Bruno Nunes</p>
+        <p>Felipe Coimbra</p>
+        <p>Lucas Conceição</p>
+        <p>Mariana Toledo</p>
+      </address>
     </footer>
-</body>
+  </body>
 </html>
